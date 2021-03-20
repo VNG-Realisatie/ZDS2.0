@@ -4,76 +4,17 @@
 #
 #    pip-compile --no-index --output-file=requirements/dev.txt requirements/base.txt requirements/dev.in requirements/testing.in
 #
-astroid==2.2.5            # via pylint
-cachetools==4.0.0         # via -r requirements/base.txt, google-auth
-certifi==2019.11.28       # via -r requirements/base.txt, kubernetes, requests
-chardet==3.0.4            # via -r requirements/base.txt, requests
-click==7.1.1              # via -r requirements/base.txt, pip-tools
-coreapi==2.3.3            # via -r requirements/base.txt, drf-yasg
-coreschema==0.0.4         # via -r requirements/base.txt, coreapi, drf-yasg
-coverage==4.5.3           # via -r requirements/testing.in
-django-appconf==1.0.3     # via -r requirements/base.txt, django-axes
-django-axes==5.3.0        # via -r requirements/base.txt
-django-choices==1.7.1     # via -r requirements/base.txt, vng-api-common
-django-debug-toolbar==2.0  # via -r requirements/dev.in
-django-extensions==2.1.9  # via -r requirements/dev.in
-django-filter==2.2.0      # via -r requirements/base.txt, vng-api-common
-django-ipware==2.1.0      # via -r requirements/base.txt, django-axes
-django-rest-framework-condition==0.1.1  # via -r requirements/base.txt, vng-api-common
-django-solo==1.1.3        # via -r requirements/base.txt, vng-api-common
-django==2.2.11            # via -r requirements/base.txt, django-appconf, django-axes, django-choices, django-debug-toolbar, django-filter, django-rest-framework-condition, drf-nested-routers, drf-yasg, vng-api-common
-djangorestframework-camel-case==1.1.2  # via -r requirements/base.txt, vng-api-common
-djangorestframework==3.9.4  # via -r requirements/base.txt, drf-nested-routers, drf-yasg, vng-api-common
-drf-nested-routers==0.91  # via -r requirements/base.txt, vng-api-common
-drf-yasg==1.16.0          # via -r requirements/base.txt, vng-api-common
-factory-boy==2.12.0       # via -r requirements/testing.in
-faker==1.0.7              # via factory-boy
-freezegun==0.3.12         # via -r requirements/testing.in
-gemma-zds-client==0.13.1  # via -r requirements/base.txt, vng-api-common
-google-auth==1.11.3       # via -r requirements/base.txt, kubernetes
-idna==2.9                 # via -r requirements/base.txt, requests
-inflection==0.3.1         # via -r requirements/base.txt, drf-yasg
-iso-639==0.4.5            # via -r requirements/base.txt, vng-api-common
-isodate==0.6.0            # via -r requirements/base.txt, vng-api-common
-isort==4.3.21             # via -r requirements/testing.in, pylint
-itypes==1.1.0             # via -r requirements/base.txt, coreapi
-jinja2==2.11.1            # via -r requirements/base.txt, coreschema
-kubernetes==11.0.0        # via -r requirements/base.txt
-lazy-object-proxy==1.4.1  # via astroid
-markupsafe==1.1.1         # via -r requirements/base.txt, jinja2
-mccabe==0.6.1             # via pylint
-mock==3.0.5               # via -r requirements/testing.in
-oauthlib==3.1.0           # via -r requirements/base.txt, requests-oauthlib
-oyaml==0.9                # via -r requirements/base.txt, vng-api-common
-pep8==1.7.1               # via -r requirements/testing.in
-pip-tools==4.5.1          # via -r requirements/base.txt
-psycopg2==2.8.4           # via -r requirements/base.txt
-pyasn1-modules==0.2.8     # via -r requirements/base.txt, google-auth
-pyasn1==0.4.8             # via -r requirements/base.txt, pyasn1-modules, rsa
-pyjwt==1.7.1              # via -r requirements/base.txt, gemma-zds-client, vng-api-common
-pylint==2.3.1             # via -r requirements/testing.in
-python-dateutil==2.8.1    # via -r requirements/base.txt, faker, freezegun, kubernetes
-python-dotenv==0.12.0     # via -r requirements/base.txt
-pytz==2019.3              # via -r requirements/base.txt, django
-pyyaml==5.3               # via -r requirements/base.txt, gemma-zds-client, kubernetes, oyaml, vng-api-common
-raven==6.10.0             # via -r requirements/base.txt
-requests-oauthlib==1.3.0  # via -r requirements/base.txt, kubernetes
-requests==2.23.0          # via -r requirements/base.txt, coreapi, gemma-zds-client, kubernetes, requests-oauthlib, vng-api-common
-rsa==4.0                  # via -r requirements/base.txt, google-auth
-ruamel.yaml.clib==0.2.0   # via -r requirements/base.txt, ruamel.yaml
-ruamel.yaml==0.16.10      # via -r requirements/base.txt, drf-yasg
-six==1.14.0               # via -r requirements/base.txt, astroid, django-appconf, django-choices, django-extensions, drf-yasg, faker, freezegun, google-auth, isodate, kubernetes, mock, pip-tools, python-dateutil, websocket-client
-sqlparse==0.3.1           # via -r requirements/base.txt, django, django-debug-toolbar
-tblib==1.4.0              # via -r requirements/testing.in
-text-unidecode==1.2       # via faker
-typed-ast==1.4.0          # via astroid
-unidecode==1.1.1          # via -r requirements/base.txt, vng-api-common
-uritemplate==3.0.1        # via -r requirements/base.txt, coreapi, drf-yasg
-urllib3==1.25.8           # via -r requirements/base.txt, kubernetes, requests
-uwsgi==2.0.18             # via -r requirements/base.txt
-vng-api-common==1.5.0     # via -r requirements/base.txt
-websocket-client==0.57.0  # via -r requirements/base.txt, kubernetes
-wrapt==1.11.2             # via astroid
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
+django-debug-toolbar==2.0
+    # via -r dev.in
+django-extensions==2.1.9
+    # via -r dev.in
+django==2.2.11
+    # via django-debug-toolbar
+pytz==2019.3
+    # via django
+six==1.14.0
+    # via django-extensions
+sqlparse==0.3.1
+    # via
+    #   django
+    #   django-debug-toolbar
