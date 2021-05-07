@@ -2241,6 +2241,12 @@ paths:
         schema:
           type: string
           format: uri
+      - name: indicatieLaatstGezetteStatus
+        in: query
+        description: Aanduiding of het de laatst bekende bereikte status betreft.
+        required: false
+        schema:
+          type: boolean
       - name: page
         in: query
         description: Een pagina binnen de gepagineerde set resultaten.
@@ -7741,6 +7747,11 @@ components:
           description: De datum waarop de ZAAK de status heeft verkregen.
           type: string
           format: date-time
+        indicatieLaatstGezetteStatus:
+          title: Indicatie laatst gezette status
+          description: Aanduiding of het de laatst bekende bereikte status betreft.
+          type: boolean
+          readOnly: true
         statustoelichting:
           title: Statustoelichting
           description: Een, voor de initiator van de zaak relevante, toelichting op
