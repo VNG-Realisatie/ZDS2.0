@@ -130,6 +130,16 @@ Bij het verwijderen van een `EnkelvoudigInformatieObject` MOETEN het `Enkelvoudi
 - `gebruiksrechten` - de gebruiksrechten die horen bij het `EnkelvoudigInformatieObject`.
 - `audittrail` - de geschiedenis van het object.
 
+**<a name="drc-010">Vernietigen van een specifieke versie van een informatieobject ([drc-010](#drc-010))**
+
+<span style="padding: 0.2em 0.5em; border: solid 1px #EEEEEE; border-radius: 3px; background: #DDDFFF;">
+    <strong>Nieuw in versie 1.1.0</strong>
+</span>
+
+Een specifieke versie van een `EnkelvoudigInformatieObject` MAG ALLEEN verwijderd worden indien er geen `ObjectInformatieObject`-en meer aan deze specifieke versie gerelateerd zijn. Indien er nog relaties zijn, dan MOET het DRC antwoorden met een `HTTP 400` foutbericht.
+
+Bij het verwijderen van een specifieke versie van een `EnkelvoudigInformatieObject` MOET de `?versie=<nummer>` querystring parameter gebruikt worden, ook als het de meest recente versie betreft. Indien niet aanwezig is, dan geldt het gedrag van [drc-008](#drc-008).
+
 #### **<a name="drc-009">Locken en unlocken van documenten ([drc-009](#drc-009))</a>**
 
 Bij het bijwerken van `InformatieObject` (`enkelvoudiginformatieobject_update`, `enkelvoudiginformatieobject_partial_update`) MOET eerst een `lock` verkregen worden. De consumer voert de `enkelvoudiginformatieobject_lock` operatie uit, waarbij het DRC MOET antwoorden met een niet-te-raden `lockId`. Het DRC MOET vervolgens alle schrijf-operaties blokkeren tenzij het correcte `lockId` meegegeven is.
