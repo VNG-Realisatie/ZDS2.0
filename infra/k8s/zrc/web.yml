@@ -26,11 +26,11 @@ spec:
         imagePullPolicy: Always
         resources:
           requests:
-            memory: "200Mi"
-            cpu: "5m"
-          limits:
             memory: "500Mi"
             cpu: "250m"
+          limits:
+            memory: "1000Mi"
+            cpu: "1000m"
         readinessProbe:
           httpGet:
             path: /
